@@ -1,0 +1,46 @@
+---
+import "@/styles/global.css";
+import "./styles.css";
+// Component Imports
+import MainLayout from "@/layouts/main.astro";
+
+// Page Metadata
+const content = {
+  title: "Calculator | Frontend Showcase",
+  description: "A simple calculator built with Astro.",
+};
+---
+
+<MainLayout content={content}>
+  <div id="root">
+    <div id="calculator">
+      <div class="display" id="display">0</div>
+      <div class="buttons">
+        <!-- operators + numbers interleaved in CSS Grid -->
+        <button data-action="clear">C</button>
+        <button data-number="1">1</button>
+        <button data-number="2">2</button>
+        <button data-operator="+">+</button>
+
+        <button data-number="3">3</button>
+        <button data-number="4">4</button>
+        <button data-number="5">5</button>
+        <button data-operator="-">−</button>
+
+        <button data-number="6">6</button>
+        <button data-number="7">7</button>
+        <button data-number="8">8</button>
+        <button data-operator="*">×</button>
+
+        <button data-number="9">9</button>
+        <button data-number="0">0</button>
+        <button data-action="decimal">.</button>
+        <button data-operator="/">÷</button>
+
+        <button data-action="equals" class="equals">=</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="./script.ts"></script>
+</MainLayout>

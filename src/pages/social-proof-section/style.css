@@ -1,0 +1,261 @@
+@font-face {
+  font-family: "League Spartan";
+  src: url("./assets/fonts/League_Spartan/LeagueSpartan-VariableFont_wght.ttf")
+    format("truetype");
+  font-display: swap;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-align: start;
+  overflow-wrap: break-word;
+}
+
+:root {
+  --clr-primary: 300 43% 22%;
+  --clr-neutral-1: 0 0% 100%;
+  --clr-neutral-2: 300 24% 96%;
+  --clr-neutral-3: 303 10% 53%;
+  --clr-accent: 333 80% 67%;
+
+  --ff-primary: "League Spartan", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+    sans-serif;
+
+  --fw-400: 400;
+  --fw-500: 500;
+  --fw-700: 700;
+
+  --fs-400: 0.9375rem;
+  --fs-900: 1.6rem;
+}
+
+body {
+  min-height: 100vh;
+  padding: 3rem 0;
+  font-family: var(--ff-primary);
+  font-size: var(--fs-400);
+  background-image: url("./assets/images/bg-pattern-top-mobile.svg"),
+    url("./assets/images/bg-pattern-bottom-mobile.svg");
+  background-repeat: no-repeat;
+  background-position: top left, bottom right;
+  background-color: hsl(var(--clr-neutral-1));
+  display: grid;
+  place-items: center;
+}
+
+.page-container {
+  width: min(87.5%, 700rem);
+  display: grid;
+  gap: 3rem;
+}
+
+.header {
+  text-align: center;
+  display: grid;
+  place-items: center;
+  gap: 1rem;
+}
+
+.header__title {
+  max-width: max(12rem, 20vmax);
+  font-size: max(var(--fs-900), 3vmax);
+  font-weight: var(--fw-700);
+  line-height: 1;
+  color: hsl(var(--clr-primary));
+}
+
+.header__description {
+  color: hsl(var(--clr-neutral-3));
+  font-size: 1.12rem;
+}
+
+.ratings {
+  display: grid;
+  place-items: center;
+  gap: 1rem;
+}
+
+.rating {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background-color: hsl(var(--clr-neutral-2));
+  display: flex;
+  flex-direction: column;
+}
+
+.rating__stars {
+  margin-bottom: 0.5rem;
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.rating__title {
+  min-width: fit-content;
+  text-align: center;
+  color: hsl(var(--clr-primary));
+  font-weight: var(--fw-700);
+}
+
+.reviews {
+  display: grid;
+  gap: 1rem;
+}
+
+.review {
+  padding: 2.9rem;
+  background-color: hsl(var(--clr-primary));
+  color: hsl(var(--clr-neutral-1));
+  border-radius: 0.5rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.review__header {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.review__author-avatar {
+  width: 2.5rem;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.review__author {
+  display: grid;
+  align-items: center;
+}
+
+.review__name {
+  font-weight: var(--fw-700);
+}
+
+.review__verified {
+  color: hsl(var(--clr-accent));
+}
+
+.review__text {
+  color: hsl(var(--clr-neutral-1));
+}
+
+.attribution {
+  padding: 2rem;
+  font-size: 1.5rem;
+  text-align: center;
+  color: hsl(var(--clr-neutral-3));
+}
+
+.attribution a {
+  color: hsla(var(--clr-primary) / 0.8);
+  font-weight: var(--fw-700);
+  text-decoration-line: underline;
+}
+
+.attribution a:hover,
+.attribution a:focus {
+  text-shadow: 0 0 1rem;
+}
+
+@media screen and (min-width: 37.5rem) {
+  .page-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .header {
+    text-align: start;
+    align-items: start;
+    justify-items: start;
+  }
+
+  .reviews {
+    grid-column-end: span 2;
+  }
+}
+
+@media screen and (min-width: 56.25rem) {
+  body {
+    background-image: url("./assets/images/bg-pattern-top-desktop.svg"),
+      url("./assets/images/bg-pattern-bottom-desktop.svg");
+    background-position: top left, bottom right;
+  }
+
+  .reviews {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (min-width: 69.375rem) {
+  .header__description {
+    max-width: 26rem;
+  }
+
+  .rating {
+    max-width: 26rem;
+    padding: 1rem 2rem;
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+
+  .rating--1 {
+    justify-self: start;
+  }
+
+  .rating--2 {
+    justify-self: center;
+  }
+
+  .rating--3 {
+    justify-self: end;
+  }
+
+  .rating__stars {
+    margin-bottom: 0;
+  }
+
+  .review {
+    height: fit-content;
+  }
+
+  .review--2 {
+    margin-top: 1rem;
+  }
+
+  .review--3 {
+    margin-top: 2rem;
+  }
+}

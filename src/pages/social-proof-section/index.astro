@@ -1,0 +1,122 @@
+---
+import "@/styles/global.css";
+import "./style.css";
+import { Image } from "astro:assets";
+// Component Imports
+import MainLayout from "@/layouts/main.astro";
+
+// Page Metadata
+const content = {
+  title: "Social Proof | Frontend Showcase",
+  description:
+    'This is a solution to the "Social Proof section challenge" on Frontend Mentor.',
+};
+
+//Image Imports
+import Star from "./assets/images/icon-star.svg";
+import Colton from "./assets/images/image-colton.jpg";
+import Irene from "./assets/images/image-irene.jpg";
+import Anne from "./assets/images/image-anne.jpg";
+
+const stars = Array.from({ length: 5 });
+---
+
+<MainLayout content={content}>
+  <Fragment slot="head">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&family=Poppins:wght@200;400;600&display=swap"
+      rel="stylesheet"
+    />
+  </Fragment>
+
+  <main class="page-container">
+    <section class="header">
+      <h1 class="header__title">10,000+ of our users love our products.</h1>
+      <p class="header__description">
+        We only provide great products combined with excellent customer service.
+        See what our satisfied customers are saying about our services.
+      </p>
+    </section>
+    <section class="ratings">
+      <div class="rating rating--1">
+        <div class="rating__stars">
+          {stars.map((_) => <Image src={Star} alt="star" />)}
+        </div>
+        <h2 class="rating__title">Rated 5 Stars in Reviews</h2>
+      </div>
+      <div class="rating rating--2">
+        <div class="rating__stars">
+          {stars.map((_) => <Image src={Star} alt="star" />)}
+        </div>
+        <h2 class="rating__title">Rated 5 Stars in Report Guru</h2>
+      </div>
+      <div class="rating rating--3">
+        <div class="rating__stars">
+          {stars.map((_) => <Image src={Star} alt="star" />)}
+        </div>
+        <h2 class="rating__title">Rated 5 Stars in BestTech</h2>
+      </div>
+    </section>
+
+    <section class="reviews">
+      <div class="review review--1">
+        <div class="review__header">
+          <div class="review__author-avatar">
+            <Image class="review__avatar" src={Colton} alt="Colton Smith" />
+          </div>
+          <div class="review__author">
+            <h3 class="review__name">Colton Smith</h3>
+            <p class="review__verified">Verified Buyer</p>
+          </div>
+        </div>
+        <p class="review__text">
+          "We needed the same printed design as the one we had ordered a week
+          prior. Not only did they find the original order, but we also received
+          it in time. Excellent!"
+        </p>
+      </div>
+      <div class="review review--2">
+        <div class="review__header">
+          <div class="review__author-avatar">
+            <Image class="review__avatar" src={Irene} alt="Irene Roberts" />
+          </div>
+          <div class="review__author">
+            <h3 class="review__name">Irene Roberts</h3>
+            <p class="review__verified">Verified Buyer</p>
+          </div>
+        </div>
+        <p class="review__text">
+          "Customer service is always excellent and very quick turn around.
+          Completely delighted with the simplicity of the purchase and the speed
+          of delivery."
+        </p>
+      </div>
+      <div class="review review--3">
+        <div class="review__header">
+          <div class="review__author-avatar">
+            <Image class="review__avatar" src={Anne} alt="Anne Wallace" />
+          </div>
+          <div class="review__author">
+            <h3 class="review__name">Anne Wallace</h3>
+            <p class="review__verified">Verified Buyer</p>
+          </div>
+        </div>
+        <p class="review__text">
+          "Put an order with this company and can only praise them for the very
+          high standard. Will definitely use them again and recommend them to
+          everyone!"
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <div class="attribution">
+    Challenge by
+    <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+      >Frontend Mentor</a
+    >, Coded by
+    <a href="https://www.frontendmentor.io/profile/NiloyDas07">Niloy</a>
+  </div>
+</MainLayout>

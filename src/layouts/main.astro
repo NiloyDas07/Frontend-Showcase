@@ -33,6 +33,7 @@ const { content } = Astro.props;
       href="images/favicon-192x192.png"
     />
     <title>{content?.title ?? "Frontend Showcase"}</title>
+    <slot name="head" />
   </head>
   <body class="min-h-svh py-4">
     <slot />

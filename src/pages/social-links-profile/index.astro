@@ -1,0 +1,43 @@
+---
+import "./style.css";
+import { Image } from "astro:assets";
+// Component Imports
+import MainLayout from "@/layouts/main.astro";
+
+// Page Metadata
+const content = {
+  title: "Social Links Profile | Frontend Showcase",
+  description:
+    'This is a solution to the "Social Links Profile challenge" on Frontend Mentor.',
+};
+
+//Image Imports
+import Avatar from "./assets/images/avatar-jessica.jpeg";
+---
+
+<MainLayout content={content}>
+  <div class="container col">
+    <header class="col">
+      <div class="img-container">
+        <Image
+          src={Avatar}
+          alt="Profile Image"
+          width={176}
+          height={176}
+        />
+      </div>
+      <div class="personal-details">
+        <h1 class="name">Jessica Randall</h1>
+        <p class="address">London, United Kingdom</p>
+      </div>
+      <p class="description">Front-end developer and avid reader.</p>
+    </header>
+    <main class="social-link-group col">
+      <a href="#" class="social-link">GitHub</a>
+      <a href="#" class="social-link">Frontend Mentor</a>
+      <a href="#" class="social-link">LinkedIn</a>
+      <a href="#" class="social-link">Twitter</a>
+      <a href="#" class="social-link">Instagram</a>
+    </main>
+  </div>
+</MainLayout>

@@ -28,7 +28,7 @@ body {
   border-radius: var(--radius);
   box-shadow: 0 4px 12px var(--shadow);
   overflow: hidden;
-  /* max-width: 320px; */
+  max-width: 40rem;
   width: 90vw;
 }
 

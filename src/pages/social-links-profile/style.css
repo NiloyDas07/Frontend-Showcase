@@ -1,0 +1,119 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("./assets/fonts/Inter-VariableFont.ttf") format("truetype");
+  font-display: swap;
+}
+
+:root {
+  --clr-viewport-background: hsl(0, 0%, 8%);
+  --clr-primary: hsl(0, 0%, 12%);
+  --clr-secondary: hsl(0, 0%, 100%);
+  --clr-accent-1: hsl(0, 0%, 20%);
+  --clr-accent-2: hsl(75, 94%, 57%);
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+p {
+  font-size: 14px;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+body {
+  min-width: 100%;
+  min-height: 100vh;
+
+  padding: 1rem;
+  background-color: var(--clr-viewport-background);
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  align-content: center;
+}
+
+.container {
+  max-width: 380px;
+  margin: 0 auto;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  background-color: var(--clr-primary);
+  color: var(--clr-secondary);
+  gap: 30px;
+  text-align: center;
+}
+
+header {
+  gap: 40px;
+}
+
+.img-container {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.img-container:hover {
+  cursor: url("./assets/images/cursor.svg"), auto;
+}
+
+.name {
+  font-size: 2em;
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  margin-bottom: 0.9rem;
+  font-weight: 700;
+  color: var(--clr-secondary);
+}
+
+.address {
+  color: var(--clr-accent-2);
+  font-weight: 600;
+}
+
+.description::before,
+.description::after {
+  quotes: '"' '"';
+  content: open-quote;
+}
+
+.social-link-group {
+  width: 95%;
+  gap: 1rem;
+}
+
+.social-link {
+  width: 100%;
+  padding: 1rem 0;
+  border-radius: 0.5rem;
+  background-color: var(--clr-accent-1);
+  font-weight: 600;
+}
+
+.social-link:hover,
+.social-link:focus {
+  cursor: url("./assets/images/cursor.svg"), auto;
+  background-color: var(--clr-accent-2);
+  color: var(--clr-viewport-background);
+}

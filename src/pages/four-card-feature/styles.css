@@ -1,0 +1,140 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --Red: hsl(0, 78%, 62%);
+  --Cyan: hsl(180, 62%, 55%);
+  --Orange: hsl(34, 97%, 64%);
+  --Blue: hsl(212, 86%, 64%);
+  --Very-Dark-Blue: hsl(234, 12%, 34%);
+  --Grayish-Blue: hsl(229, 6%, 66%);
+  --Very-Light-Gray: hsl(0, 0%, 98%);
+  font-size: 0.938rem;
+}
+
+html {
+  line-height: 1.3em;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+}
+
+.card {
+  max-width: 21rem;
+  padding: 2rem;
+  font-size: 0.8999rem;
+  border-radius: 0.5rem;
+  border-top: 0.4rem solid;
+  box-shadow: 0 0.8rem 1rem hsla(220, 5%, 11%, 0.2);
+  gap: 1rem;
+}
+
+.card-icon {
+  margin-top: 1.3rem;
+  align-self: flex-end;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+
+  min-height: 100vh;
+  padding: 5rem 0 1rem 0;
+  font-family: "Poppins", sans-serif;
+  background-color: var(--Very-Light-Gray);
+  color: var(--Grayish-Blue);
+  gap: 5rem;
+  align-items: center;
+}
+
+header {
+  max-width: 33rem;
+  padding: 0.3645;
+  text-align: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+header h1,
+header h2 {
+  font-size: 2rem;
+  color: var(--Very-Dark-Blue);
+  font-family: "Poppins", sans-serif;
+}
+
+header h1 {
+  font-weight: 200;
+}
+
+header h2 {
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+main {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.card-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.467rem;
+}
+
+.card-heading {
+  font-weight: 600;
+  font-size: 1.08rem;
+  color: var(--Very-Dark-Blue);
+}
+
+.mid-section {
+  gap: 1.467rem;
+}
+
+.supervisor-card {
+  border-top-color: var(--Cyan);
+}
+
+.team-builder-card {
+  border-top-color: var(--Red);
+}
+
+.karma-card {
+  border-top-color: var(--Orange);
+}
+
+.calculator-card {
+  border-top-color: var(--Blue);
+}
+
+@media screen and (min-width: 900px) {
+  .card-group {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .card-group > * {
+    width: 30%;
+    max-width: 23.333rem;
+  }
+
+  .mid-section .card {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+@media screen and (min-width: 1800px) {
+  :root {
+    font-size: 1.25rem;
+  }
+}

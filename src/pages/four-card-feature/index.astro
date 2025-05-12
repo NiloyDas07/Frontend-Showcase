@@ -1,0 +1,95 @@
+---
+import "./styles.css";
+import { Image } from "astro:assets";
+// Component Imports
+import MainLayout from "@/layouts/main.astro";
+
+// Page Metadata
+const content = {
+  title: "QR Code | Frontend Showcase",
+  description:
+    'This is a solution to the "QR Code challenge" on Frontend Mentor.',
+};
+
+// Image Imports
+import Calculator from "./images/icon-calculator.svg";
+import Karma from "./images/icon-karma.svg";
+import Supervisor from "./images/icon-supervisor.svg";
+import TeamBuilder from "./images/icon-team-builder.svg";
+---
+
+<MainLayout content={content}>
+  <Fragment slot="head">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap"
+      rel="stylesheet"
+    />
+  </Fragment>
+
+  <header class="col">
+    <h1>Reliable, efficient delivery</h1>
+    <h2>Powered by Technology</h2>
+    <p>
+      Our Artificial Intelligence powered tools use millions of project data
+      points to ensure that your project is successful
+    </p>
+  </header>
+
+  <main>
+    <div class="card-group">
+      <section class="card col supervisor-card">
+        <h3 class="card-heading">Supervisor</h3>
+        <p>Monitors activity to identify project roadblocks</p>
+        <Image
+          src={Supervisor}
+          alt="Supervisor Icon"
+          class="card-icon"
+          width={64}
+          height={64}
+        />
+      </section>
+
+      <div class="mid-section col">
+        <section class="card col team-builder-card">
+          <h3 class="card-heading">Team Builder</h3>
+          <p>
+            Scans our talent network to create the optimal team for your project
+          </p>
+          <Image
+            src={TeamBuilder}
+            alt="Team Builder Icon"
+            class="card-icon"
+            width={64}
+            height={64}
+          />
+        </section>
+
+        <section class="card col karma-card">
+          <h3 class="card-heading">Karma</h3>
+          <p>Regularly evaluates our talent to ensure quality</p>
+          <Image
+            src={Karma}
+            alt="Karma Icon"
+            class="card-icon"
+            width={64}
+            height={64}
+          />
+        </section>
+      </div>
+
+      <section class="card col calculator-card">
+        <h3 class="card-heading">Calculator</h3>
+        <p>Uses data from past projects to provide better delivery estimates</p>
+        <Image
+          src={Calculator}
+          alt="Calculator Icon"
+          class="card-icon"
+          width={64}
+          height={64}
+        />
+      </section>
+    </div>
+  </main>
+</MainLayout>

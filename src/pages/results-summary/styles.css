@@ -1,0 +1,224 @@
+@font-face {
+  font-family: "Hanken Grotesk";
+  src: url("./assets/fonts/HankenGrotesk-VariableFont.ttf");
+}
+
+:root {
+  /* Primary Colors */
+  --Light-red-value: 0, 100%, 67%;
+  --Orangey-yellow-value: 39, 100%, 56%;
+  --Green-teal-value: 166, 100%, 37%;
+  --Cobalt-blue-value: 234, 85%, 45%;
+
+  --Light-red: hsl(0, 100%, 67%);
+  --Orangey-yellow: hsl(39, 100%, 56%);
+  --Green-teal: hsl(166, 100%, 37%);
+  --Cobalt-blue: hsl(234, 85%, 45%);
+
+  /* Gradients */
+  --Light-slate-blue: hsl(252, 100%, 67%);
+  --Light-royal-blue: hsl(241, 81%, 54%);
+  --Violet-blue: hsla(256, 72%, 46%, 1);
+  --Persian-blue: hsla(241, 72%, 46%, 0);
+
+  /* Neutral Colors */
+  --Dark-gray-blue-value: 224, 30%, 27%;
+
+  --Pale-blue: hsl(221, 100%, 96%);
+  --Light-lavender: hsl(241, 100%, 89%);
+  --Dark-gray-blue: hsl(224, 30%, 27%);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  line-height: 1.3;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Hanken Grotesk", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+    sans-serif !important;
+  font-size: 18px;
+}
+
+.heading-small {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.heading-large {
+  font-size: 2rem;
+  font-weight: 700;
+  color: white;
+}
+
+.total-score {
+  font-size: 4rem;
+  font-weight: 700;
+  color: white;
+}
+
+.gray {
+  color: var(--Light-lavender);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+.summary-card {
+  padding: 2rem 4rem;
+  background: linear-gradient(var(--Light-slate-blue), var(--Light-royal-blue));
+  border-radius: 0 0 2rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.circle {
+  width: 140px;
+  height: 140px;
+  background-color: var(--Violet-blue);
+  background: linear-gradient(var(--Violet-blue), var(--Persian-blue));
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.of-100 {
+  color: hsl(241, 100%, 89%, 0.7);
+  font-weight: 800;
+}
+
+.summary-card-text {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.summary-card-text p {
+  color: var(--Light-lavender);
+}
+
+.summary-text {
+  padding: 2rem 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.summary-text header {
+  color: var(--Dark-gray-blue);
+}
+
+.summary-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.summary__stats__element {
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.summary__stats__element:nth-child(1) {
+  color: var(--Light-red);
+  background-color: hsl(var(--Light-red-value), 0.1);
+  border-radius: 0.5rem;
+}
+
+.summary__stats__element:nth-child(2) {
+  color: var(--Orangey-yellow);
+  background-color: hsl(var(--Orangey-yellow-value), 0.1);
+  border-radius: 0.5rem;
+}
+
+.summary__stats__element:nth-child(3) {
+  color: var(--Green-teal);
+  background-color: hsl(var(--Green-teal-value), 0.1);
+  border-radius: 0.5rem;
+}
+
+.summary__stats__element:nth-child(4) {
+  stroke: gold;
+  color: var(--Cobalt-blue);
+  background-color: hsl(var(--Cobalt-blue-value), 0.1);
+  border-radius: 0.5rem;
+}
+
+.scores {
+  color: var(--Dark-gray-blue);
+  font-weight: 500;
+  margin-left: auto;
+}
+
+.scores::after {
+  content: " / 100";
+  opacity: 0.7;
+}
+
+.continue {
+  padding: 1rem;
+  border: none;
+  border-radius: 100vh;
+  background-color: var(--Dark-gray-blue);
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.continue:hover,
+.continue:focus {
+  background: linear-gradient(var(--Light-slate-blue), var(--Light-royal-blue));
+}
+
+.continue:active {
+  background: var(--Dark-gray-blue);
+}
+
+@media screen and (min-width: 741px) {
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  main {
+    --border-radius: 2rem;
+    max-width: 740px;
+    box-shadow: 0.5rem 1rem 3rem hsla(var(--Dark-gray-blue-value), 0.2);
+    border-radius: var(--border-radius);
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  section {
+    width: 50%;
+  }
+
+  .summary-card {
+    padding-top: 2rem;
+    border-radius: var(--border-radius);
+  }
+
+  .circle {
+    width: 200px;
+    height: 200px;
+  }
+}

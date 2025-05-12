@@ -1,0 +1,186 @@
+@font-face {
+  font-family: "Young-Serif";
+  src: url(./assets/fonts/young-serif/YoungSerif-Regular.ttf) format(truetype);
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "Outfit";
+  src: url(./assets/fonts/outfit/Outfit-VariableFont_wght.ttf) format(truetype);
+  font-display: fallback;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  --Nutmeg: hsl(14, 45%, 36%);
+  --Dark-Raspberry: hsl(332, 51%, 32%);
+  --Rose-White: hsl(330, 100%, 98%);
+  --Eggshell: hsl(30, 54%, 90%);
+  --Light-Grey: hsl(30, 18%, 87%);
+  --Wenge-Brown: hsl(30, 10%, 34%);
+  --Dark-Charcoal: hsl(24, 5%, 18%);
+}
+
+html {
+  line-height: 1.3rem;
+}
+
+p {
+  font-size: 16px;
+}
+
+.outer-container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  border-radius: 0;
+}
+
+.inner-container {
+  padding: 0 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  font-family: "Outfit", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+    sans-serif;
+  color: var(--Wenge-Brown);
+}
+
+@media screen and (min-width: 426px) {
+  body {
+    padding: 120px 0;
+    display: flex;
+    justify-content: center;
+    background-color: var(--Eggshell);
+  }
+
+  .outer-container {
+    width: 51.39%;
+    padding: 2.9%;
+    border-radius: 1rem;
+    background-color: white;
+  }
+
+  img {
+    border-radius: 0.5rem;
+  }
+
+  .inner-container {
+    padding: 0;
+  }
+
+  ul li,
+  ol li {
+    padding-left: 2.08vw;
+  }
+}
+
+img,
+picture {
+  width: 100%;
+}
+
+.heading {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}
+
+h1 {
+  font-family: "Young-Serif", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+    sans-serif;
+  color: var(--Dark-Charcoal);
+  font-size: 1.5em;
+  text-align: start;
+}
+
+.prep-block {
+  padding: 4.571149948955492%;
+  background-color: var(--Rose-White);
+  border-radius: 0.5rem;
+}
+
+.prep-content {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+#prep-head {
+  font-family: "Outfit";
+  font-size: 1.17em;
+  font-weight: 600;
+  color: var(--Dark-Raspberry);
+}
+
+.prep-content b {
+  font-weight: 600;
+}
+
+ul li,
+ol li {
+  padding-left: 30px;
+}
+
+ul,
+ol {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-left: 21px;
+}
+
+h2 {
+  font-family: "Young-Serif", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+    sans-serif;
+  color: var(--Nutmeg);
+  font-size: 1.5em;
+  font-weight: 700;
+}
+
+.recipe-details {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.recipe-details ul {
+  list-style-type: square;
+}
+
+.recipe-details ul li::marker,
+ol li::marker {
+  color: var(--Nutmeg);
+}
+
+hr {
+  background-color: var(--Light-Grey);
+}
+
+.nutrition-content {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.nutrition-table {
+  background-color: var(--Light-Grey);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 1px;
+  line-height: 60px;
+}
+
+.nutrition-table p {
+  background-color: white;
+}
+
+.nutrition-table b {
+  color: var(--Nutmeg);
+  font-weight: 600;
+}

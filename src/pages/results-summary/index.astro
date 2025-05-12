@@ -1,0 +1,55 @@
+---
+import "./styles.css";
+import { Image } from "astro:assets";
+import results, { totalScore } from "./data";
+// Component Imports
+import MainLayout from "@/layouts/main.astro";
+
+// Page Metadata
+const content = {
+  title: "Results Summary | Frontend Showcase",
+  description:
+    'This is a solution to the "Results summary challenge" on Frontend Mentor.',
+};
+---
+
+<MainLayout content={content}>
+  <main>
+    <section class="summary-card">
+      <header class="gray heading-small">Your Result</header>
+      <div class="circle">
+        <div class="total-score">
+          {totalScore}
+        </div>
+        <p class="of-100">of 100</p>
+      </div>
+      <div class="summary-card-text">
+        <div class="heading-large">Great</div>
+        <p>
+          You scored higher than 65% of the people who have taken these tests.
+        </p>
+      </div>
+    </section>
+    <section class="summary-text">
+      <header class="heading-small">Summary</header>
+      <div class="summary-stats">
+        {
+          results.map((result) => (
+            <div class="summary__stats__element">
+              <Image
+                src={result.icon}
+                alt={result.category}
+                class={`${result.category}-icon`}
+              />
+
+              <p class={`${result.category}-category`}>{result.category}</p>
+
+              <p class="scores">{result.score}</p>
+            </div>
+          ))
+        }
+      </div>
+      <button type="button" class="continue heading-small">Continue</button>
+    </section>
+  </main>
+</MainLayout>

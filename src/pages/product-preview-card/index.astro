@@ -1,0 +1,60 @@
+---
+import "./styles.css";
+import { Image } from "astro:assets";
+// Component Imports
+import MainLayout from "@/layouts/main.astro";
+
+// Page Metadata
+const content = {
+  title: "Product Preview Card | Frontend Showcase",
+  description:
+    'This is a solution to the "Product Preview Card challenge" on Frontend Mentor.',
+};
+
+// Image Imports
+import desktopImage from "./images/image-product-desktop.jpg";
+import mobileImage from "./images/image-product-mobile.jpg";
+import cartIcon from "./images/icon-cart.svg";
+---
+
+<MainLayout content={content}>
+  <Fragment slot="head">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;1,9..144,700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </Fragment>
+
+  <main class="container">
+    <div class="image-container"></div>
+
+    <div class="text col">
+      <div class="product-details col">
+        <h1 class="product-category">Perfume</h1>
+        <h2 class="product-name">Gabrielle Essence Eau De Parfum</h2>
+        <p class="product-description">
+          A floral, solar and voluptuous interpretation composed by Olivier
+          Polge, Perfumer-Creator for the House of CHANEL.
+        </p>
+      </div>
+      <div class="add-to-cart col">
+        <div class="row">
+          <p class="current-price">$149.99</p>
+          <p class="original-price">$169.99</p>
+        </div>
+        <button type="button" class="add-to-cart-btn row">
+          <Image
+            src={cartIcon}
+            alt="Cart Icon"
+            width={15}
+            height={16}
+            class="cart-icon"
+          />
+          <p>Add to Cart</p></button
+        >
+      </div>
+    </div>
+  </main>
+</MainLayout>

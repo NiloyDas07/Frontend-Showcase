@@ -1,0 +1,169 @@
+@font-face {
+  font-family: "Figtree";
+  src: url(./assets/fonts/Figtree-VariableFont_wght.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  --Yellow: #f4d04e;
+  --Grey: #7f7f7f;
+  font-family: "Figtree";
+  font-size: 1rem;
+}
+
+body {
+  min-height: 100vh;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--Yellow);
+  color: black;
+}
+
+#outer-container {
+  width: 300px;
+  border: 1px solid black;
+  border-radius: 20px;
+  padding: 24px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  overflow: hidden;
+  box-shadow: 4px 4px black;
+  cursor: url("./assets/images/pointer.png"), auto;
+}
+
+header {
+  height: 200px;
+}
+
+#image-container {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+#banner {
+  height: 200px;
+  cursor: url("./assets/images/cursor.svg"), auto;
+  object-fit: cover;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+#category {
+  display: flex;
+  gap: 8px;
+}
+
+.category-item {
+  height: 100%;
+  padding: 4px 12px;
+  border-radius: 4px;
+  background-color: var(--Yellow);
+  font-size: 0.75rem;
+  font-weight: 800;
+  line-height: 150%;
+  cursor: url("./assets/images/cursor.svg"), auto;
+}
+
+#grow {
+  flex-grow: 1;
+}
+
+#publish-date {
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: 150%;
+}
+
+#title {
+  font-size: 20px;
+  font-weight: 800;
+  line-height: 150%;
+  cursor: url("./assets/images/cursor.svg"), auto;
+}
+
+#description {
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 150%;
+  color: var(--Grey);
+  cursor: url("./assets/images/cursor.svg"), auto;
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+#userpic {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  cursor: url("./assets/images/cursor.svg"), auto;
+}
+
+#authorname {
+  font-size: 0.875rem;
+  font-weight: 800;
+  cursor: url("./assets/images/cursor.svg"), auto;
+}
+
+@media screen and (min-width: 375px) {
+  #outer-container {
+    width: 327px;
+    box-shadow: 8px 8px black;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  #outer-container {
+    width: 384px;
+    box-shadow: 8px 8px black;
+  }
+
+  #outer-container:hover {
+    box-shadow: 16px 16px black;
+  }
+
+  .category-item {
+    font-size: 0.875rem;
+  }
+
+  .category-item:hover {
+    background-color: black;
+    color: var(--Yellow);
+  }
+
+  #publish-date {
+    font-size: 0.875rem;
+  }
+
+  #title {
+    font-size: 1.5rem;
+  }
+
+  #title:hover,
+  #authorname:hover {
+    color: var(--Yellow);
+  }
+
+  #description {
+    font-size: 1rem;
+  }
+
+  #description:hover {
+    color: black;
+  }
+}

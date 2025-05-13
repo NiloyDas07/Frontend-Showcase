@@ -1,0 +1,45 @@
+---
+import "./styles.css";
+import { Image } from "astro:assets";
+// Component Imports
+import MainLayout from "@/layouts/main.astro";
+
+// Page Metadata
+const content = {
+  title: "Blog Preview | Frontend Showcase",
+  description:
+    'This is a solution to the "Blog Preview challenge" on Frontend Mentor.',
+};
+
+// Image Imports
+import Banner from "./assets/images/illustration-article.svg";
+import Avatar from "./assets/images/image-avatar.webp";
+---
+
+<MainLayout content={content}>
+  <div id="outer-container">
+    <header>
+      <div id="image-container">
+        <Image src={Banner} alt="Banner" id="banner" />
+      </div>
+    </header>
+
+    <main>
+      <div id="category">
+        <p class="category-item">Learning</p>
+        <p id="grow"></p>
+      </div>
+      <div id="publish-date">Published 21 Dec 2023</div>
+      <div id="title">HTML & CSS foundations</div>
+      <div id="description">
+        These languages are the backbone of every website, defining structure,
+        content, and presentation.
+      </div>
+    </main>
+
+    <footer>
+      <Image src={Avatar} alt="Picture of Author" id="userpic" />
+      <div id="authorname">Greg Hooper</div>
+    </footer>
+  </div>
+</MainLayout>

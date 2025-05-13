@@ -1,0 +1,76 @@
+---
+import "./styles.css";
+import { Image } from "astro:assets";
+// Component Imports
+import MainLayout from "@/layouts/main.astro";
+
+// Page Metadata
+const content = {
+  title: "FAQ Accordion | Frontend Showcase",
+  description:
+    'This is a solution to the "FAQ Accordion challenge" on Frontend Mentor.',
+};
+
+// Image Imports
+import StarIcon from "./assets/images/icon-star.svg";
+---
+
+<MainLayout content={content}>
+  <div id="container">
+    <header>
+      <Image src={StarIcon} alt="Star Icon" />
+      <h1>FAQs</h1>
+    </header>
+
+    <main>
+      <section>
+        <input type="checkbox" id="Q1" checked />
+        <label for="Q1"
+          ><h2>What is Frontend Mentor, and how will it help me?</h2></label
+        >
+        <p class="answer" id="A1">
+          Frontend Mentor offers realistic coding challenges to help developers
+          improve their frontend coding skills with projects in HTML, CSS, and
+          JavaScript. It's suitable for all levels and ideal for portfolio
+          building.
+        </p>
+      </section>
+      <hr />
+      <section>
+        <input type="checkbox" id="Q2" />
+        <label for="Q2"><h2>Is Frontend Mentor free?</h2></label>
+
+        <p class="answer" id="A2">
+          Yes, Frontend Mentor offers both free and premium coding challenges,
+          with the free option providing access to a range of projects suitable
+          for all skill levels.
+        </p>
+      </section>
+      <hr />
+      <section>
+        <input type="checkbox" id="Q3" />
+        <label for="Q3"
+          ><h2>Can I use Frontend Mentor projects in my portfolio?</h2></label
+        >
+
+        <p class="answer" id="A3">
+          Yes, you can use projects completed on Frontend Mentor in your
+          portfolio. It's an excellent way to showcase your skills to potential
+          employers!
+        </p>
+      </section>
+      <hr />
+      <section>
+        <input type="checkbox" id="Q4" />
+        <label for="Q4"
+          ><h2>How can I get help if I'm stuck on a challenge?</h2></label
+        >
+        <p class="answer" id="A4">
+          The best place to get help is inside Frontend Mentor's Discord
+          community. There's a help channel where you can ask questions and seek
+          support from other community members.
+        </p>
+      </section>
+    </main>
+  </div>
+</MainLayout>

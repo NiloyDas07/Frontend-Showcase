@@ -1,0 +1,47 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  href: string;
+  index: number;
+}
+
+const { title, description, href, index } = Astro.props;
+
+// Define a color palette
+const colors = [
+  "bg-blue-500",
+  "bg-green-500",
+  "bg-purple-500",
+  "bg-yellow-500",
+  "bg-pink-500",
+  "bg-teal-500",
+];
+
+// Calculate the color index, ensuring no two adjacent cards have the same color
+const getColorIndex = (i: number) => {
+  const baseIndex = i % colors.length;
+  const isEvenRow = Math.floor(i / 3) % 2 === 0;
+  return (baseIndex + (isEvenRow ? 0 : 1)) % colors.length;
+};
+
+const colorClass = colors[getColorIndex(index)];
+---
+
+<a
+  href={href}
+  class={`group relative block overflow-hidden rounded-xl shadow-lg hover:shadow-[0_10px_20px_rgba(0,0,0,0.35)] hover:scale-[1.02] transition-all duration-300 ease-out ${colorClass} text-white transform-gpu`}
+>
+  <div class="p-6">
+    <h3
+      class="text-xl font-semibold mb-2 group-hover:text-white/90 transition-colors duration-300"
+    >
+      {title}
+    </h3>
+    <p
+      class="text-gray-200 group-hover:text-gray-100 transition-colors duration-300"
+    >
+      {description}
+    </p>
+  </div>
+</a>

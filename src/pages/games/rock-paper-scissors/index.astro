@@ -1,0 +1,16 @@
+---
+// Component Imports
+import MainLayout from "@/layouts/main.astro";
+import App from "./App.jsx";
+
+const content = {
+  title: "Rock Paper Scissors | Frontend Showcase",
+  description: "A simple rock paper scissors game against the computer.",
+};
+---
+
+<MainLayout content={content}>
+  <div id="root">
+    <App client:load />
+  </div>
+</MainLayout>

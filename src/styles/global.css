@@ -144,7 +144,7 @@
   h1 {
     @apply font-montserrat text-center relative text-2xl sm:text-5xl font-extrabold leading-tight text-foreground;
   }
-  h1::after {
+  .heading-frontend-showcase::after, .heading-games::after {
     content: attr(data-text);
     @apply absolute left-0 top-[58%] sm:top-[60%] w-full transform -scale-y-110 -skew-x-35 translate-x-[6px] sm:translate-x-[12px] opacity-100 pointer-events-none text-black/50 mask-linear-from-10% to-black;
   }

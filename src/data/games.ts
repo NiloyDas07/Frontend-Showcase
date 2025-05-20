@@ -7,8 +7,8 @@ export const games: Project[] = [
     href: "/games/rock-paper-scissors"
   },
   {
-    title: "Coin Click",
-    description: "A simple clicker game where you collect coins.",
-    href: "/games/coin-click"
+    title: "Coin Burst",
+    description: "A simple game where you hover over coins to score points and avoid bombs.",
+    href: "/games/coin-burst"
   }
 ];

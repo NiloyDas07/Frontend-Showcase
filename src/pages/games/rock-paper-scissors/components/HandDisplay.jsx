@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import styles from "./HandDisplay.module.css";
+import clsx from 'clsx';
 
 const HandDisplay = ({ playerHand, computerHand }) => {
   const [animate, setAnimate] = useState(false);
@@ -14,17 +15,17 @@ const HandDisplay = ({ playerHand, computerHand }) => {
   return (
     <div className={styles["hand-selection-container"]}>
       <div className="player-section">
-        <h1 className={`${styles["player-hand"]} ${animate ? styles["player-hand-animate"] : ''}`}>
+        <div className={clsx(styles["hand-choice"], animate ? styles["player-hand"] : '')}>
           {playerHand}
-        </h1>
-        <p className="player-label">You</p>
+        </div>
+        <p className={styles.label}>You</p>
       </div>
-      <div className="vs">VS</div>
+      <div className={styles.vs}>VS</div>
       <div className="computer-section">
-        <h1 className={`${styles["computer-hand"]} ${animate ? styles["computer-hand-animate"] : ''}`}>
+        <div className={clsx(styles["hand-choice"], animate ? styles["computer-hand"] : '')}>
           {computerHand}
-        </h1>
-        <p className="computer-label">Computer</p>
+        </div>
+        <p className={styles.label}>Computer</p>
       </div>
     </div>
   );

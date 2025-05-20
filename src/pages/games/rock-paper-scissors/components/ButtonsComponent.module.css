@@ -1,24 +1,20 @@
 .button-component {
+  height: 25%;
   display: flex;
-  justify-content: center;
-  gap: 1.5rem;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
   flex-wrap: wrap;
-  margin-top: 1rem;
 }
 
 .choice-button {
-  width: 100px;
-  height: 100px;
+  width: 4rem;
+  height: 4rem;
   border-radius: 50%;
-  font-size: 1.1rem;
-  font-weight: 600;
   cursor: pointer;
   border: none;
-  color: white;
-  text-transform: capitalize;
   transition: all 0.3s ease;
   position: relative;
-  overflow: hidden;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
   display: flex;
   flex-direction: column;
@@ -51,35 +47,18 @@
 
 .choice-button span {
   font-size: 2rem;
-  margin-bottom: 0.25rem;
 }
 
 /* Specific button colors */
-.choice-button[data-hand="rock"] {
-  background: linear-gradient(135deg, #f72585, #b5179e);
+.choice-button[data-hand="Rock"] {
+  background: linear-gradient(135deg, #8d5524, #050301); /* earthy clay to dark soil */
+
 }
 
-.choice-button[data-hand="paper"] {
-  background: linear-gradient(135deg, #4cc9f0, #4895ef);
+.choice-button[data-hand="Paper"] {
+  background: linear-gradient(135deg, #f5f5f5, #9c9b9b); /* clean white to light grey */
 }
 
-.choice-button[data-hand="scissors"] {
-  background: linear-gradient(135deg, #f9c74f, #f8961e);
-}
-
-/* Responsive adjustments */
-@media (max-width: 480px) {
-  .button-component {
-    gap: 1rem;
-  }
-  
-  .choice-button {
-    width: 85px;
-    height: 85px;
-    font-size: 1rem;
-  }
-  
-  .choice-button span {
-    font-size: 1.75rem;
-  }
+.choice-button[data-hand="Scissors"] {
+  background: linear-gradient(135deg, #9d9d9d, #343434); /* metallic silver to steel grey */
 }

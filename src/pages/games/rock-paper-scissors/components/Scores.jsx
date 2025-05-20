@@ -3,7 +3,7 @@ import styles from "./Scores.module.css";
 const Scores = ({ playerScore, computerScore }) => {
   return (
     <div className={styles.scores}>
-      <h1>Score</h1>
+      <h2>Score</h2>
       <div className={styles["score-display"]}>
         <div className={styles["score-item"]}>
           <div className={styles["score-label"]}>You</div>

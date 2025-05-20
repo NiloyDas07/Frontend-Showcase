@@ -1,6 +1,8 @@
 ---
 // Component Imports
 import MainLayout from "@/layouts/main.astro";
+import ProjectCard from "@/components/ProjectCard.astro";
+import { games } from "@/data/games";
 
 const content = {
   title: "Games | Frontend Showcase",
@@ -8,6 +10,26 @@ const content = {
 };
 ---
 
-<MainLayout content={content} >
-    
+<MainLayout content={content}>
+  <header class="custom-container space-y-10">
+    <h1 data-text="Games">Games</h1>
+    <p class="text-center text-[1.1rem]">
+      A collection of fun and interactive games
+    </p>
+  </header>
+
+  <main class="custom-container py-12">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {
+        games.map((game, index) => (
+          <ProjectCard
+            title={game.title}
+            description={game.description}
+            href={game.href}
+            index={index}
+          />
+        ))
+      }
+    </div>
+  </main>
 </MainLayout>

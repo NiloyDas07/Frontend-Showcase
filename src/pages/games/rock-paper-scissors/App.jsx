@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import HandDisplay from "./components/HandDisplay";
 import Scores from "./components/Scores";
-import TextChoiceDisplay from "./components/TextChoiceDisplay";
 import ButtonsComponent from "./components/ButtonsComponent";
 import hands from "./consts/hands";
 import "./App.css";
@@ -45,7 +44,7 @@ function App() {
   };
 
   return (
-    <div className="game-container">
+    <>
       <h1 className="game-title">Rock Paper Scissors</h1>
       
       {/* Game Board */}
@@ -60,26 +59,19 @@ function App() {
           computerScore={gameState.computerScore}
         />
         
-        <TextChoiceDisplay
-          playerChoice={gameState.playerHand.name}
-          computerChoice={gameState.computerHand.name}
+        <ButtonsComponent 
+          setGameState={updateGameState} 
+          gameState={gameState}
         />
-        
+
         {/* Game result overlay */}
-        {gameState.gameResult && (
           <div className={`result-overlay ${gameState.gameResult}`}>
             {gameState.gameResult === 'win' && '🎉 You Win! 🎉'}
             {gameState.gameResult === 'lose' && '😢 You Lose! 😢'}
             {gameState.gameResult === 'draw' && '🤝 Draw! 🤝'}
           </div>
-        )}
-        
-        <ButtonsComponent 
-          setGameState={updateGameState} 
-          gameState={gameState}
-        />
       </div>
-    </div>
+    </>
   );
 }
 

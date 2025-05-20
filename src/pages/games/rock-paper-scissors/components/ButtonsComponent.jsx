@@ -30,7 +30,6 @@ export default function ButtonsComponent({ setGameState, gameState }) {
           data-hand={hand.name}
         >
           <span>{hand.emogi}</span>
-          <span>{hand.name}</span>
         </button>
       ))}
     </div>

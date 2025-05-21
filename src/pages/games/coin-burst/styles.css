@@ -1,3 +1,8 @@
+.center-x {
+    margin-left: auto;
+    margin-right: auto;
+}
+
 :root {
   --primary: rgb(26, 26, 46);
   --secondary: #16213e;
@@ -180,6 +185,7 @@ h1::after {
 }
 
 .start-button {
+  display: block;
   background: linear-gradient(45deg, var(--highlight), #ff6b6b);
   color: white;
   border: none;

@@ -1,5 +1,13 @@
 let score = 0;
 let coinSound, bombSound;
+let cursorX = 0;
+let cursorY = 0;
+
+// Cursor Position
+window.addEventListener("mousemove", e => {
+  cursorX = e.clientX;
+  cursorY = e.clientY;
+});
 
 // Root
 const root = document.querySelector("#root");
@@ -77,6 +85,31 @@ function initAudio() {
 
 function play() {
   const root = document.getElementById("root");
+  let difficulty = 1;
+  let waveDuration = 15000;  // 15 seconds per wave
+  let coinIntervalId, bombIntervalId, waveTimeoutId;
+
+  function setSpawners() {
+    // Clear old spawners if any
+    clearInterval(coinIntervalId);
+    clearInterval(bombIntervalId);
+
+    // Calculate new rates - decreases with increasing difficulty
+    const coinRate = Math.max(300, 1000 - difficulty * 100);
+    const bombRate = Math.max(300, 1000 - difficulty * 80);
+
+    coinIntervalId = setInterval(addCoin, coinRate);
+    bombIntervalId = setInterval(addBomb, bombRate);
+  }
+
+  function rampDifficulty() {
+    difficulty++;
+    // Cap difficulty at 10
+    if (difficulty <= 10) {
+      setSpawners();
+      waveTimeoutId = setTimeout(rampDifficulty, waveDuration);
+    }
+  }
 
   function displayFinalScore() {
     const modalHeading = document.createElement("h2");
@@ -87,8 +120,16 @@ function play() {
     finalScore.textContent = `You Collected ${score} Coins`;
 
     playButton.textContent = "Play Again";
+    playButton.classList.add("center-x");
     modal.replaceChildren(modalHeading, finalScore, playButton);
     root.appendChild(modal);
+  }
+
+  function gameOver() {
+    clearInterval(coinIntervalId);
+    clearInterval(bombIntervalId);
+    clearTimeout(waveTimeoutId);
+    displayFinalScore();
   }
 
   function addCoin() {
@@ -113,16 +154,20 @@ function play() {
     root.appendChild(coin);
 
     const timeout = setTimeout(() => {
-      root.removeChild(coin);
+      if (coin.parentNode === root) {
+        root.removeChild(coin);
+      }
     }, 5000);
 
     coin.addEventListener("mouseover", () => {
       score++;
       scoreElement.textContent = `Coins Collected : ${score}`;
       // Play coin collection sound
-      coinSound.currentTime = 0; // Rewind to start in case it's already playing
+      coinSound.currentTime = 0;
       coinSound.play().catch(e => console.log("Audio play failed:", e));
-      root.removeChild(coin);
+      if (coin.parentNode === root) {
+        root.removeChild(coin);
+      }
       clearTimeout(timeout);
     });
   }
@@ -130,26 +175,34 @@ function play() {
   function addBomb() {
     const bomb = document.createElement("img");
     bomb.src = window.gameAssets.bomb;
-
-    const width = window.innerWidth;
-    const height = window.innerHeight;
-
-    let top = Math.random() * height;
-    let left = Math.random() * width;
-
-    top = top > height - 105 ? height - 105 : top;
-    left = left > width - 105 ? width - 105 : left;
-
     bomb.style.width = "45px";
     bomb.style.height = "60px";
     bomb.style.position = "absolute";
-    bomb.style.top = top + "px";
-    bomb.style.left = left + "px";
+
+    const width = window.innerWidth;
+    const height = window.innerHeight;
+    const safeRadius = 80; // px around the cursor
+
+    let top, left, dx, dy, dist;
+    do {
+      top  = Math.random() * (height  - 105);
+      left = Math.random() * (width   - 105);
+
+      // compute euclidean distance to pointer:
+      dx = left + 22.5 - cursorX; // + half bomb width
+      dy = top  + 30   - cursorY; // + half bomb height
+      dist = Math.hypot(dx, dy);
+    } while (dist < safeRadius);  
+    
+    bomb.style.top = `${top}px`;
+    bomb.style.left = `${left}px`;
 
     root.appendChild(bomb);
 
     const timeout = setTimeout(() => {
-      root.removeChild(bomb);
+      if (bomb.parentNode === root) {
+        root.removeChild(bomb);
+      }
     }, 2000);
 
     bomb.addEventListener("mouseover", () => {
@@ -157,19 +210,18 @@ function play() {
       bombSound.currentTime = 0;
       bombSound.play().catch(e => console.log("Audio play failed:", e));
       
-      score++;
-      root.removeChild(bomb);
+      if (bomb.parentNode === root) {
+        root.removeChild(bomb);
+      }
       clearTimeout(timeout);
-
-      clearInterval(insertCoin);
-      clearInterval(insertBomb);
-
-      displayFinalScore();
+      gameOver();
     });
   }
 
-  const insertCoin = setInterval(addCoin, 1000);
-  const insertBomb = setInterval(addBomb, 1000);
+
+  // start the first wave
+  setSpawners();
+  waveTimeoutId = setTimeout(rampDifficulty, waveDuration);
 }
 
 window.addEventListener("DOMContentLoaded", () => {

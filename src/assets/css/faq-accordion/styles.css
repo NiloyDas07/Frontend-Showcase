@@ -1,6 +1,6 @@
 @font-face {
   font-family: "WorkSans";
-  src: url("./assets/fonts/WorkSans-VariableFont_wght.ttf");
+  src: url("../../../../public/fonts/WorkSans/WorkSans-VariableFont_wght.ttf");
 }
 
 * {
@@ -22,7 +22,7 @@ body {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  background-image: url("./assets/images/background-pattern-mobile.svg");
+  background-image: url("../../images/faq-accordion/images/background-pattern-mobile.svg");
   background-repeat: no-repeat;
   background-color: var(--LightPink);
 }
@@ -97,7 +97,7 @@ input:focus + label {
 label:hover,
 label:focus {
   color: var(--GrayishPurple);
-  cursor: url("./assets/images/cursor.svg"), auto;
+  cursor: url("../../images/faq-accordion/images/cursor.svg"), auto;
 }
 
 label {
@@ -107,15 +107,15 @@ label {
 }
 
 label::after {
-  content: url("./assets/images/icon-plus.svg");
+  content: url("../../images/faq-accordion/images/icon-plus.svg");
 }
 
 input:checked + label::after {
-  content: url("./assets/images/icon-minus.svg");
+  content: url("../../images/faq-accordion/images/icon-minus.svg");
 }
 
 @media screen and (min-width: 376px) {
   body {
-    background-image: url("./assets/images/background-pattern-desktop.svg");
+    background-image: url("../../images/faq-accordion/images/background-pattern-desktop.svg");
   }
 }

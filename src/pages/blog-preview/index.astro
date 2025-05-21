@@ -1,5 +1,5 @@
 ---
-import "./styles.css";
+import "@/assets/css/blog-preview/styles.css";
 import { Image } from "astro:assets";
 // Component Imports
 import MainLayout from "@/layouts/main.astro";
@@ -12,8 +12,8 @@ const content = {
 };
 
 // Image Imports
-import Banner from "./assets/images/illustration-article.svg";
-import Avatar from "./assets/images/image-avatar.webp";
+import Banner from "@/assets/images/blog-preview/illustration-article.svg";
+import Avatar from "@/assets/images/blog-preview/image-avatar.webp";
 ---
 
 <MainLayout content={content}>

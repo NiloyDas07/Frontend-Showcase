@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Figtree";
-  src: url(./assets/fonts/Figtree-VariableFont_wght.ttf);
+  src: url("../../../../public/fonts/Figtree/Figtree-VariableFont_wght.ttf");
 }
 
 * {
@@ -9,6 +9,7 @@
   box-sizing: border-box;
   --Yellow: #f4d04e;
   --Grey: #7f7f7f;
+  cursor: url("../../images/blog-preview/pointer.png"), auto;
   font-family: "Figtree";
   font-size: 1rem;
 }
@@ -34,7 +35,7 @@ body {
   gap: 24px;
   overflow: hidden;
   box-shadow: 4px 4px black;
-  cursor: url("./assets/images/pointer.png"), auto;
+  cursor: url("../../images/blog-preview/pointer.png"), auto;
 }
 
 header {
@@ -50,7 +51,7 @@ header {
 
 #banner {
   height: 200px;
-  cursor: url("./assets/images/cursor.svg"), auto;
+  cursor: url("../../images/blog-preview/cursor.svg"), auto;
   object-fit: cover;
 }
 
@@ -73,7 +74,7 @@ main {
   font-size: 0.75rem;
   font-weight: 800;
   line-height: 150%;
-  cursor: url("./assets/images/cursor.svg"), auto;
+  cursor: url("../../images/blog-preview/cursor.svg"), auto;
 }
 
 #grow {
@@ -90,7 +91,7 @@ main {
   font-size: 20px;
   font-weight: 800;
   line-height: 150%;
-  cursor: url("./assets/images/cursor.svg"), auto;
+  cursor: url("../../images/blog-preview/cursor.svg"), auto;
 }
 
 #description {
@@ -98,7 +99,7 @@ main {
   font-weight: 500;
   line-height: 150%;
   color: var(--Grey);
-  cursor: url("./assets/images/cursor.svg"), auto;
+  cursor: url("../../images/blog-preview/cursor.svg"), auto;
 }
 
 footer {
@@ -111,13 +112,13 @@ footer {
   width: 32px;
   height: 32px;
   border-radius: 50%;
-  cursor: url("./assets/images/cursor.svg"), auto;
+  cursor: url("../../images/blog-preview/cursor.svg"), auto;
 }
 
 #authorname {
   font-size: 0.875rem;
   font-weight: 800;
-  cursor: url("./assets/images/cursor.svg"), auto;
+  cursor: url("../../images/blog-preview/cursor.svg"), auto;
 }
 
 @media screen and (min-width: 375px) {

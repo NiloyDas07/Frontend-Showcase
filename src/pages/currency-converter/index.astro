@@ -1,0 +1,17 @@
+---
+import "./styles.css";
+// Component Imports
+import MainLayout from "@/layouts/main.astro";
+import App from "./App.jsx";
+
+const content = {
+  title: "Currency Converter | Frontend Showcase",
+  description: "A real-time currency converter.",
+};
+---
+
+<MainLayout content={content}>
+  <div id="root">
+    <App client:load />
+  </div>
+</MainLayout>

@@ -11,6 +11,11 @@ export const projects: Project[] = [
     href: "/games",
   },
   {
+    title: "Currency Converter",
+    description: "A real-time currency converter.",
+    href: "/currency-converter",
+  },
+  {
     title: "Offline Video Player",
     description:
       "Video player that works both online and offline. Users can download and install it in their device.",

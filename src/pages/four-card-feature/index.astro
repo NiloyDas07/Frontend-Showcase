@@ -1,5 +1,5 @@
 ---
-import "./styles.css";
+import "@/assets/css/four-card-feature/styles.css";
 import { Image } from "astro:assets";
 // Component Imports
 import MainLayout from "@/layouts/main.astro";
@@ -8,14 +8,14 @@ import MainLayout from "@/layouts/main.astro";
 const content = {
   title: "Four Card Feature | Frontend Showcase",
   description:
-    'This is a solution to the "Four Card Feature section challenge" on Frontend Mentor.',
+    'This is a solution to the "Four Card Feature section" challenge on Frontend Mentor.',
 };
 
 // Image Imports
-import Calculator from "./images/icon-calculator.svg";
-import Karma from "./images/icon-karma.svg";
-import Supervisor from "./images/icon-supervisor.svg";
-import TeamBuilder from "./images/icon-team-builder.svg";
+import Calculator from "@/assets/images/four-card-feature/icon-calculator.svg";
+import Karma from "@/assets/images/four-card-feature/icon-karma.svg";
+import Supervisor from "@/assets/images/four-card-feature/icon-supervisor.svg";
+import TeamBuilder from "@/assets/images/four-card-feature/icon-team-builder.svg";
 ---
 
 <MainLayout content={content}>

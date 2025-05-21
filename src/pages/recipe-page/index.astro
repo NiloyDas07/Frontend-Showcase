@@ -1,5 +1,5 @@
 ---
-import "./styles.css";
+import "@/assets/css/recipe-page/styles.css";
 import { Image } from "astro:assets";
 // Component Imports
 import MainLayout from "@/layouts/main.astro";
@@ -8,11 +8,11 @@ import MainLayout from "@/layouts/main.astro";
 const content = {
   title: "Recipe Page | Frontend Showcase",
   description:
-    'This is a solution to the "Recipe Page challenge" on Frontend Mentor.',
+    'This is a solution to the "Recipe Page" challenge on Frontend Mentor.',
 };
 
-//Image Imports
-import omeletteImage from "./assets/images/image-omelette.jpeg";
+// Image Imports
+import omeletteImage from "@/assets/images/recipe-page/image-omelette.jpeg";
 ---
 
 <MainLayout content={content}>

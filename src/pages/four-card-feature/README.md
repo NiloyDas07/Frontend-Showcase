@@ -22,7 +22,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpeg)
+![](../../assets/images/four-card-feature/screenshot.jpeg)
 
 ### Links
 

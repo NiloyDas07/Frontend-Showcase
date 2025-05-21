@@ -136,7 +136,7 @@ body {
 .image-container {
   width: 100%;
   background-color: oklch(0.75 0.01 0);
-  background-image: url(./images/image-product-mobile.jpg);
+  background-image: url("../../images/product-preview-card/image-product-mobile.jpg");
   background-size: contain;
   aspect-ratio: 343 / 240;
   background-repeat: no-repeat;
@@ -152,7 +152,7 @@ body {
   }
 
   .image-container {
-    background-image: url(./images/image-product-desktop.jpg);
+    background-image: url("../../images/product-preview-card/image-product-desktop.jpg");
     aspect-ratio: none;
   }
 }

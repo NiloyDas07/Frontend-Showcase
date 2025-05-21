@@ -1,5 +1,5 @@
 ---
-import "./styles.css";
+import "@/assets/css/qr-code/styles.css";
 import { Image } from "astro:assets";
 // Component Imports
 import MainLayout from "@/layouts/main.astro";
@@ -8,11 +8,11 @@ import MainLayout from "@/layouts/main.astro";
 const content = {
   title: "QR Code | Frontend Showcase",
   description:
-    'This is a solution to the "QR Code challenge" on Frontend Mentor.',
+    'This is a solution to the "QR Code" challenge on Frontend Mentor.',
 };
 
-//Image Imports
-import qrCodeImage from "./images/image-qr-code.png";
+// Image Imports
+import qrCodeImage from "@/assets/images/qr-code/image-qr-code.png";
 ---
 
 <MainLayout content={content}>

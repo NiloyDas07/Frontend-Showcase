@@ -1,12 +1,12 @@
 @font-face {
   font-family: "Young-Serif";
-  src: url(./assets/fonts/young-serif/YoungSerif-Regular.ttf) format(truetype);
+  src: url("../../../../public/fonts/YoungSerif/YoungSerif-Regular.ttf") format(truetype);
   font-display: fallback;
 }
 
 @font-face {
   font-family: "Outfit";
-  src: url(./assets/fonts/outfit/Outfit-VariableFont_wght.ttf) format(truetype);
+  src: url("../../../../public/fonts/outfit/Outfit-VariableFont_wght.ttf") format(truetype);
   font-display: fallback;
 }
 

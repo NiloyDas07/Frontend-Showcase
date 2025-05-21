@@ -1,7 +1,7 @@
-import Reaction from "./assets/images/icon-reaction.svg";
-import Memory from "./assets/images/icon-memory.svg";
-import Verbal from "./assets/images/icon-verbal.svg";
-import Visual from "./assets/images/icon-visual.svg";
+import Reaction from "@/assets/images/results-summary/icon-reaction.svg";
+import Memory from "@/assets/images/results-summary/icon-memory.svg";
+import Verbal from "@/assets/images/results-summary/icon-verbal.svg";
+import Visual from "@/assets/images/results-summary/icon-visual.svg";
 import type { ImageMetadata } from "astro";
 
 type Result = {

@@ -1,3 +1,9 @@
+@font-face {
+  font-family: "Outfit";
+  src: url("../../../../public/fonts/outfit/Outfit-VariableFont_wght.ttf") format(truetype);
+  font-display: fallback;
+}
+
 * {
   margin: 0;
   padding: 0;

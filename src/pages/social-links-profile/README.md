@@ -22,7 +22,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpeg)
+![](../../assets/images/social-links-profile/screenshot.jpeg)
 
 ### Links
 

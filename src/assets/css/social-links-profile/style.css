@@ -8,8 +8,9 @@
 
 @font-face {
   font-family: "Inter";
-  src: url("./assets/fonts/Inter-VariableFont.ttf") format("truetype");
+  src: url("../../../public/fonts/Inter/Inter-VariableFont.ttf") format("truetype");
   font-display: swap;
+  font-weight: 100 900;
 }
 
 :root {

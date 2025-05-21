@@ -28,7 +28,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpeg)
+![](../../assets/images/faq-accordion/images/screenshot.jpeg)
 
 ### Links
 

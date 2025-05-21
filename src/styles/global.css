@@ -130,6 +130,13 @@
   font-display: fallback;
 }
 
+@font-face {
+    font-family: "Poppins";
+    src: url("/fonts/Poppins/Poppins-Variable.woff2")
+      format("woff2");
+    font-display: fallback;
+  }
+
 @utility container {
   margin-inline: auto;
 }

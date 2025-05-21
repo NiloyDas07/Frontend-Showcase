@@ -1,4 +1,5 @@
 let score = 0;
+let coinSound, bombSound;
 
 // Root
 const root = document.querySelector("#root");
@@ -31,6 +32,9 @@ playButton.addEventListener("click", () => {
 });
 
 const displayStart = () => {
+  // Initialize audio when the game starts
+  initAudio();
+  
   // Instructions
   const instructionsHeading = document.createElement("h2");
   instructionsHeading.textContent = "Instructions";
@@ -52,6 +56,24 @@ const displayStart = () => {
     modal.append(instructionsHeading, instructions, playButton);
     root.append(modal);
 };
+
+function initAudio() {
+  coinSound = new Audio();
+  bombSound = new Audio();
+  
+  // Check for browser support and set audio sources
+  if (coinSound.canPlayType('audio/ogg')) {
+    coinSound.src = window.gameAssets.coinOgg;
+    bombSound.src = window.gameAssets.bombOgg;
+  } else {
+    coinSound.src = window.gameAssets.coinMp3;
+    bombSound.src = window.gameAssets.bombMp3;
+  }
+  
+  // Preload audio
+  coinSound.load();
+  bombSound.load();
+}
 
 function play() {
   const root = document.getElementById("root");
@@ -97,6 +119,9 @@ function play() {
     coin.addEventListener("mouseover", () => {
       score++;
       scoreElement.textContent = `Coins Collected : ${score}`;
+      // Play coin collection sound
+      coinSound.currentTime = 0; // Rewind to start in case it's already playing
+      coinSound.play().catch(e => console.log("Audio play failed:", e));
       root.removeChild(coin);
       clearTimeout(timeout);
     });
@@ -128,8 +153,11 @@ function play() {
     }, 2000);
 
     bomb.addEventListener("mouseover", () => {
+      // Play bomb explosion sound
+      bombSound.currentTime = 0;
+      bombSound.play().catch(e => console.log("Audio play failed:", e));
+      
       score++;
-
       root.removeChild(bomb);
       clearTimeout(timeout);
 
@@ -147,4 +175,3 @@ function play() {
 window.addEventListener("DOMContentLoaded", () => {
   displayStart();
 });
-

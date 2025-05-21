@@ -7,6 +7,12 @@ import MainLayout from "@/layouts/main.astro";
 import coinImg from "./Images/coin.gif";
 import bombImg from "./Images/bomb.gif";
 
+// Audio Imports
+import coinMp3 from "./audio/coin.mp3";
+import coinOgg from "./audio/coin.ogg";
+import bombMp3 from "./audio/bomb.mp3";
+import bombOgg from "./audio/bomb.ogg";
+
 // Page Metadata
 const content = {
   title: "Coin Burst | Frontend Showcase",
@@ -14,11 +20,15 @@ const content = {
     "A simple game where you hover over coins to score points and avoid bombs.",
 };
 
-// Pass image URLs to the script
+// Pass image and audio URLs to the script
 const script = `
   window.gameAssets = {
     coin: "${coinImg.src}",
     bomb: "${bombImg.src}",
+    coinMp3: "${coinMp3}",
+    coinOgg: "${coinOgg}",
+    bombMp3: "${bombMp3}",
+    bombOgg: "${bombOgg}",
   };
 `;
 ---

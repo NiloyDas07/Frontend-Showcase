@@ -17,8 +17,10 @@ This is a solution to the [Recipe page challenge on Frontend Mentor](https://www
 
 ### Screenshot
 
-![](../../assets/images/recipe-page/desktop-preview.jpg)
-- ![Mobile](./screenshots/screenshot-m.jpeg)
+- Desktop
+  ![Desktop](../../assets/images/recipe-page/screenshot.jpeg)
+- Mobile
+  ![Mobile](../../assets/images/recipe-page/screenshot-m.jpeg)
 
 ### Links
 

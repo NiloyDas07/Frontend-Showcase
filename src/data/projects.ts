@@ -19,7 +19,7 @@ export const projects: Project[] = [
     title: "Offline Video Player",
     description:
       "Video player that works both online and offline. Users can download and install it in their device.",
-    href: "/offline-video-player",
+    href: "https://niloydas07.github.io/Offline-Video-Player/",
   },
   {
     title: "Blog Preview",

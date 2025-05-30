@@ -1,4 +1,4 @@
-import styles from "./Scores.module.css";
+import styles from "@/assets/css/rock-paper-scissors/Scores.module.css";
 
 const Scores = ({ playerScore, computerScore }) => {
   return (

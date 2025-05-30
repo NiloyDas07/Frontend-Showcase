@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import styles from "./HandDisplay.module.css";
+import styles from "@/assets/css/rock-paper-scissors/HandDisplay.module.css";
 import clsx from 'clsx';
 
 const HandDisplay = ({ playerHand, computerHand }) => {

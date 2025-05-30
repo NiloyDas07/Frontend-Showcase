@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import hands from "../consts/hands.js";
-import styles from "./ButtonsComponent.module.css";
+import hands from "../../pages/games/rock-paper-scissors/consts/hands.js";
+import styles from "@/assets/css/rock-paper-scissors/ButtonsComponent.module.css";
 
 export default function ButtonsComponent({ setGameState, gameState }) {
   const [selectedHand, setSelectedHand] = useState(null);

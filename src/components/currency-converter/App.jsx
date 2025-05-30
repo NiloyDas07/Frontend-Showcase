@@ -1,7 +1,7 @@
 import { useState } from "react";
-import { InputBox } from "./components";
-import useCurrencyInfo from "./hooks/useCurrencyInfo";
-import bgUrl from "./assets/bg-2.jpg";
+import { InputBox } from ".";
+import useCurrencyInfo from "@/pages/currency-converter/hooks/useCurrencyInfo";
+import bgUrl from "@/assets/images/currency-converter/bg-2.jpg";
 
 function App() {
   const [amount, setAmount] = useState();

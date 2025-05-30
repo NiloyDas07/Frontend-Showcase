@@ -1,8 +1,8 @@
 @font-face {
   font-family: "League Spartan";
-  src: url("./assets/fonts/League_Spartan/LeagueSpartan-VariableFont_wght.ttf")
-    format("truetype");
+  src: url("../../../public/fonts/LeagueSpartan/LeagueSpartan-VariableFont_wght.ttf") format("truetype");
   font-display: swap;
+  font-weight: 100 900;
 }
 
 *,

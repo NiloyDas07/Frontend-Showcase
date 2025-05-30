@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react';
-import HandDisplay from "./components/HandDisplay";
-import Scores from "./components/Scores";
-import ButtonsComponent from "./components/ButtonsComponent";
-import hands from "./consts/hands";
-import "./App.css";
+import HandDisplay from "./HandDisplay";
+import Scores from "./Scores";
+import ButtonsComponent from "./ButtonsComponent";
+import hands from "../../pages/games/rock-paper-scissors/consts/hands";
+import "@/assets/css/rock-paper-scissors/App.css";
 
 function App() {
   const [gameState, setGameState] = useState({

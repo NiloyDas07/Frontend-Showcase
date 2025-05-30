@@ -1,6 +1,6 @@
 ---
 import "@/styles/global.css";
-import "./style.css";
+import "@/assets/css/social-proof-section/style.css";
 import { Image } from "astro:assets";
 // Component Imports
 import MainLayout from "@/layouts/main.astro";
@@ -9,14 +9,14 @@ import MainLayout from "@/layouts/main.astro";
 const content = {
   title: "Social Proof | Frontend Showcase",
   description:
-    'This is a solution to the "Social Proof section challenge" on Frontend Mentor.',
+    'This is a solution to the "Social Proof Section" challenge on Frontend Mentor.',
 };
 
-//Image Imports
-import Star from "./assets/images/icon-star.svg";
-import Colton from "./assets/images/image-colton.jpg";
-import Irene from "./assets/images/image-irene.jpg";
-import Anne from "./assets/images/image-anne.jpg";
+// Image Imports
+import Star from "@/assets/images/social-proof-section/icon-star.svg";
+import Colton from "@/assets/images/social-proof-section/image-colton.jpg";
+import Irene from "@/assets/images/social-proof-section/image-irene.jpg";
+import Anne from "@/assets/images/social-proof-section/image-anne.jpg";
 
 const stars = Array.from({ length: 5 });
 ---

@@ -23,7 +23,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpeg)
+![](../../assets/images/social-proof-section/screenshot.jpeg)
 
 ### Links
 

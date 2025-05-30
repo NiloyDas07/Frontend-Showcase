@@ -1,6 +1,6 @@
 ---
 import "@/styles/global.css";
-import "./style.css";
+import "@/assets/css/testimonials-grid-section/style.css";
 import { Image } from "astro:assets";
 // Component Imports
 import MainLayout from "@/layouts/main.astro";
@@ -9,15 +9,15 @@ import MainLayout from "@/layouts/main.astro";
 const content = {
   title: "Testimonials Grid | Frontend Showcase",
   description:
-    'This is a solution to the "Testimonials grid section challenge" on Frontend Mentor.',
+    'This is a solution to the "Testimonials Grid Section" challenge on Frontend Mentor.',
 };
 
-//Image Imports
-import Daniel from "./images/image-daniel.jpg";
-import Jeanette from "./images/image-jeanette.jpg";
-import Jonathan from "./images/image-jonathan.jpg";
-import Kira from "./images/image-kira.jpg";
-import Patrick from "./images/image-patrick.jpg";
+// Image Imports
+import Daniel from "@/assets/images/testimonials-grid-section/image-daniel.jpg";
+import Jeanette from "@/assets/images/testimonials-grid-section/image-jeanette.jpg";
+import Jonathan from "@/assets/images/testimonials-grid-section/image-jonathan.jpg";
+import Kira from "@/assets/images/testimonials-grid-section/image-kira.jpg";
+import Patrick from "@/assets/images/testimonials-grid-section/image-patrick.jpg";
 ---
 
 <MainLayout content={content}>

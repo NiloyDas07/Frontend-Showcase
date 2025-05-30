@@ -5,8 +5,60 @@ const videoElement = document.querySelector("video");
 const playButton = document.querySelector(".custom-play-button");
 const videoTrack = videoElement.querySelector("track");
 
-if ("serviceWorker" in navigator) {
-  navigator.serviceWorker.register("./sw.js");
+// Service Worker Registration
+const registerServiceWorker = async () => {
+  if ("serviceWorker" in navigator) {
+    try {
+      // Get the current path without the filename
+      const swUrl = "./sw.js";
+
+      const registration = await navigator.serviceWorker.register(swUrl, {
+        scope: "./", // Scope relative to current location
+        updateViaCache: "none", // Always get the latest service worker
+      });
+
+      console.log(
+        "ServiceWorker registration successful with scope: ",
+        registration.scope
+      );
+
+      // Check if the service worker is controlling the page
+      if (!navigator.serviceWorker.controller) {
+        console.log("This page is not controlled by a service worker yet");
+      }
+
+      // Optional: Check for updates
+      registration.onupdatefound = () => {
+        const installingWorker = registration.installing;
+        if (installingWorker) {
+          installingWorker.onstatechange = () => {
+            if (installingWorker.state === "installed") {
+              if (navigator.serviceWorker.controller) {
+                console.log("New content is available; please refresh.");
+                // Optional: Show a refresh UI here
+              } else {
+                console.log("Content is cached for offline use.");
+              }
+            }
+          };
+        }
+      };
+    } catch (error) {
+      console.error("Error during service worker registration:", error);
+    }
+  }
+};
+
+// Wait for the page to load before registering the service worker
+if (
+  document.readyState === "complete" ||
+  document.readyState === "interactive"
+) {
+  // The page is already loaded, register immediately
+  registerServiceWorker();
+} else {
+  // Wait for the page to load
+  window.addEventListener("load", registerServiceWorker);
 }
 
 // Hidden file input

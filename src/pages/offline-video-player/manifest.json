@@ -1,6 +1,0 @@
-{
-  "name": "Offline Video Player",
-  "short_name": "VideoPlayer",
-  "start_url": "./index.html",
-  "display": "standalone"
-}

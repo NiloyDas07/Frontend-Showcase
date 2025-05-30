@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import hands from "../../pages/games/rock-paper-scissors/consts/hands.js";
+import hands from "../../data/rock-paper-scissors/hands.js";
 import styles from "@/assets/css/rock-paper-scissors/ButtonsComponent.module.css";
 
 export default function ButtonsComponent({ setGameState, gameState }) {

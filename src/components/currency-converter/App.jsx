@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { InputBox } from ".";
-import useCurrencyInfo from "@/pages/currency-converter/hooks/useCurrencyInfo";
+import useCurrencyInfo from "@/utils/currency-converter/useCurrencyInfo";
 import bgUrl from "@/assets/images/currency-converter/bg-2.jpg";
 
 function App() {

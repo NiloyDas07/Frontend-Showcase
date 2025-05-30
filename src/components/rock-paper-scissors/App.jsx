@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import HandDisplay from "./HandDisplay";
 import Scores from "./Scores";
 import ButtonsComponent from "./ButtonsComponent";
-import hands from "../../pages/games/rock-paper-scissors/consts/hands";
+import hands from "../../data/rock-paper-scissors/hands";
 import "@/assets/css/rock-paper-scissors/App.css";
 
 function App() {

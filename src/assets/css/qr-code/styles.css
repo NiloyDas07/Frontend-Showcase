@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Outfit";
-  src: url("../../../../public/fonts/outfit/Outfit-VariableFont_wght.ttf") format(truetype);
+  src: url("/fonts/Outfit/Outfit-VariableFont_wght.ttf") format(truetype);
   font-display: fallback;
 }
 

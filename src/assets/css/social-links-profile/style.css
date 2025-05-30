@@ -8,7 +8,7 @@
 
 @font-face {
   font-family: "Inter";
-  src: url("../../../public/fonts/Inter/Inter-VariableFont.ttf") format("truetype");
+  src: url("/fonts/Inter/Inter-VariableFont.ttf") format("truetype");
   font-display: swap;
   font-weight: 100 900;
 }
@@ -76,7 +76,7 @@ header {
 }
 
 .img-container:hover {
-  cursor: url("./assets/images/cursor.svg"), auto;
+  cursor: url("../../images/social-links-profile/cursor.svg"), auto;
 }
 
 .name {
@@ -114,7 +114,7 @@ header {
 
 .social-link:hover,
 .social-link:focus {
-  cursor: url("./assets/images/cursor.svg"), auto;
+  cursor: url("../../images/social-links-profile/cursor.svg"), auto;
   background-color: var(--clr-accent-2);
   color: var(--clr-viewport-background);
 }

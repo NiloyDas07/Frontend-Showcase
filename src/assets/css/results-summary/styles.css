@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Hanken Grotesk";
-  src: url("../../../../public/fonts/HankenGrotesk/HankenGrotesk-VariableFont_wght.ttf") format(truetype);
+  src: url("/fonts/HankenGrotesk/HankenGrotesk-VariableFont_wght.ttf") format(truetype);
   font-display: fallback;
 }
 

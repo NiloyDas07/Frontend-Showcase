@@ -1,6 +1,6 @@
 @font-face {
   font-family: "WorkSans";
-  src: url("../../../../public/fonts/WorkSans/WorkSans-VariableFont_wght.ttf");
+  src: url("/fonts/WorkSans/WorkSans-VariableFont_wght.ttf");
 }
 
 * {

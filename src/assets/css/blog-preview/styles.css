@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Figtree";
-  src: url("../../../../public/fonts/Figtree/Figtree-VariableFont_wght.ttf");
+  src: url("/fonts/Figtree/Figtree-VariableFont_wght.ttf") format(truetype);
 }
 
 * {

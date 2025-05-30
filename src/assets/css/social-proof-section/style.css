@@ -1,6 +1,7 @@
 @font-face {
   font-family: "League Spartan";
-  src: url("../../../public/fonts/LeagueSpartan/LeagueSpartan-VariableFont_wght.ttf") format("truetype");
+  src: url("/fonts/LeagueSpartan/LeagueSpartan-VariableFont_wght.ttf")
+    format("truetype");
   font-display: swap;
   font-weight: 100 900;
 }
@@ -63,8 +64,8 @@ body {
   padding: 3rem 0;
   font-family: var(--ff-primary);
   font-size: var(--fs-400);
-  background-image: url("./assets/images/bg-pattern-top-mobile.svg"),
-    url("./assets/images/bg-pattern-bottom-mobile.svg");
+  background-image: url("../../images/social-proof-section/bg-pattern-top-mobile.svg"),
+    url("../../images/social-proof-section/bg-pattern-bottom-mobile.svg");
   background-repeat: no-repeat;
   background-position: top left, bottom right;
   background-color: hsl(var(--clr-neutral-1));
@@ -207,8 +208,8 @@ body {
 
 @media screen and (min-width: 56.25rem) {
   body {
-    background-image: url("./assets/images/bg-pattern-top-desktop.svg"),
-      url("./assets/images/bg-pattern-bottom-desktop.svg");
+    background-image: url("../../images/social-proof-section/bg-pattern-top-desktop.svg"),
+      url("../../images/social-proof-section/bg-pattern-bottom-desktop.svg");
     background-position: top left, bottom right;
   }
 

@@ -1,13 +1,36 @@
-# Astro with Tailwind
+# Frontend Showcase
 
-```sh
-pnpm create astro@latest -- --template with-tailwindcss
-```
+This is an app that shows many of the frontend projects and components that I have built.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/with-tailwindcss)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/with-tailwindcss)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/with-tailwindcss/devcontainer.json)
+## Table of contents
 
-Astro comes with [Tailwind](https://tailwindcss.com) support out of the box. This example showcases how to style your Astro project with Tailwind.
+- [Overview](#overview)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+- [Author](#author)
 
-For complete setup instructions, please see our [Tailwind Integration Guide](https://docs.astro.build/en/guides/integrations-guide/tailwind).
+## Overview
+
+### Screenshot
+
+![](./screenshot.jpeg)
+
+### Links
+
+- [GitHub](https://github.com/NiloyDas07/Frontend-Showcase/)
+- [Live Site](https://frontend-showcase-by-niloy.netlify.app/)
+
+## Built with
+
+- Astro
+- CSS custom properties
+- Tailwind CSS
+- JavaScript
+- React
+
+## Author
+
+- GitHub - [NiloyDas07](https://github.com/NiloyDas07)
+- LinkedIn - [Niloy Das](https://www.linkedin.com/in/niloy-das-profile/)

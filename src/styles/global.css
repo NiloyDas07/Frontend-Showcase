@@ -148,12 +148,24 @@
     @apply bg-background text-foreground font-amaranth;
   }
   h1 {
-    @apply font-montserrat text-center relative text-2xl sm:text-5xl font-extrabold leading-tight text-foreground;
+    @apply font-montserrat text-center relative text-2xl font-extrabold leading-tight text-foreground;
   }
   .heading-frontend-showcase::after,
   .heading-games::after {
     content: attr(data-text);
-    @apply absolute left-0 top-[58%] sm:top-[60%] w-full transform -scale-y-110 -skew-x-35 translate-x-[6px] sm:translate-x-[12px] opacity-100 pointer-events-none text-black/50 mask-linear-from-10% to-black;
+    @apply absolute left-0 top-[58%] w-full transform -scale-y-110 -skew-x-35 translate-x-[6px] opacity-100 pointer-events-none text-black/50 mask-linear-from-10% to-black;
+  }
+
+  @media (width >= 40rem /* 640px */) {
+    h1 {
+      font-size: var(--text-5xl) /* 3rem = 48px */;
+    }
+
+    .heading-frontend-showcase::after,
+    .heading-games::after {
+      --tw-translate-x: 12px;
+      top: 60%;
+    }
   }
 }
 

@@ -7,8 +7,7 @@ This is an app that shows many of the frontend projects and components that I ha
 - [Overview](#overview)
   - [Screenshot](#screenshot)
   - [Links](#links)
-- [My process](#my-process)
-  - [Built with](#built-with)
+- [Built with](#built-with)
 - [Author](#author)
 
 ## Overview

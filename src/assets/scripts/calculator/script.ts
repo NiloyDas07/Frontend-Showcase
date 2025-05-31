@@ -108,6 +108,7 @@ if (typeof window !== "undefined") {
 
     // Enter or = for equals
     if (key === "Enter" || key === "=") {
+      e.preventDefault();
       calculate();
       return;
     }

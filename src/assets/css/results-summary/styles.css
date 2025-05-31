@@ -1,7 +1,8 @@
 @font-face {
   font-family: "Hanken Grotesk";
-  src: url("/fonts/HankenGrotesk/HankenGrotesk-VariableFont_wght.ttf") format(truetype);
-  font-display: fallback;
+  src: url("/fonts/HankenGrotesk/HankenGrotesk-VariableFont_wght.ttf")
+    format(truetype);
+  font-display: swap;
 }
 
 :root {

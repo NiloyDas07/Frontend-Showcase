@@ -3,6 +3,25 @@
 
 @custom-variant dark (&:is(.dark *));
 
+@font-face {
+  font-family: "Montserrat";
+  src: url("/fonts/Montserrat/Montserrat-VariableFont_wght.ttf")
+    format("truetype");
+  font-display: block;
+}
+
+@font-face {
+  font-family: "Amaranth";
+  src: url("/fonts/Amaranth/Amaranth-Regular.ttf") format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("/fonts/Poppins/Poppins-Variable.woff2") format("woff2");
+  font-display: swap;
+}
+
 @theme {
   --font-montserrat: "Montserrat", system-ui, -apple-system, BlinkMacSystemFont,
     "Segoe UI", Roboto, sans-serif;
@@ -117,26 +136,6 @@
   --sidebar-ring: oklch(0.552 0.016 285.938);
 }
 
-@font-face {
-  font-family: "Montserrat";
-  src: url("/fonts/Montserrat/Montserrat-VariableFont_wght.ttf")
-    format("truetype");
-  font-display: fallback;
-}
-
-@font-face {
-  font-family: "Amaranth";
-  src: url("/fonts/Amaranth/Amaranth-Regular.ttf") format("truetype");
-  font-display: fallback;
-}
-
-@font-face {
-    font-family: "Poppins";
-    src: url("/fonts/Poppins/Poppins-Variable.woff2")
-      format("woff2");
-    font-display: fallback;
-  }
-
 @utility container {
   margin-inline: auto;
 }
@@ -151,7 +150,8 @@
   h1 {
     @apply font-montserrat text-center relative text-2xl sm:text-5xl font-extrabold leading-tight text-foreground;
   }
-  .heading-frontend-showcase::after, .heading-games::after {
+  .heading-frontend-showcase::after,
+  .heading-games::after {
     content: attr(data-text);
     @apply absolute left-0 top-[58%] sm:top-[60%] w-full transform -scale-y-110 -skew-x-35 translate-x-[6px] sm:translate-x-[12px] opacity-100 pointer-events-none text-black/50 mask-linear-from-10% to-black;
   }

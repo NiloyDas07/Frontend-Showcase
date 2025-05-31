@@ -1,7 +1,7 @@
 @font-face {
   font-family: "Outfit";
   src: url("/fonts/Outfit/Outfit-VariableFont_wght.ttf") format(truetype);
-  font-display: fallback;
+  font-display: swap;
 }
 
 * {

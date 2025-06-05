@@ -4,9 +4,8 @@
 }
 
 :root {
-  --primary: rgb(26, 26, 46);
-  --secondary: #16213e;
-  --accent: #0f3460;
+  --coin-burst-primary: rgb(26, 26, 46);
+  --coin-burst-secondary: #16213e;
   --highlight: #e94560;
   --header: #ffd700;
   --text: #f8f8f8;
@@ -24,7 +23,7 @@
 
 body {
   height: 100svh;
-  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  background: linear-gradient(135deg, var(--coin-burst-primary), var(--coin-burst-secondary));
   color: var(--text);
   overflow-x: hidden;
 }
@@ -73,7 +72,7 @@ ol li::before {
 #root {
   min-height: 100vh;
   padding: 2rem;
-  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  background: linear-gradient(135deg, var(--coin-burst-primary), var(--coin-burst-secondary));
   display: flex;
   flex-direction: column;
   justify-content: flex-start;

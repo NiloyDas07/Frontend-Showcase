@@ -51,6 +51,12 @@ export const projects: Project[] = [
     href: "/product-preview-card",
   },
   {
+    title: "Contact Form",
+    description:
+      'Contact form with validation and success message. This is a solution to the "Contact Form challenge" on Frontend Mentor.',
+    href: "/contact-form",
+  },
+  {
     title: "QR Code",
     description:
       'QR code component. This is a solution to the "QR Code challenge" on Frontend Mentor.',

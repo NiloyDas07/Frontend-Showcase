@@ -1,0 +1,16 @@
+---
+import clsx from "clsx";
+
+const { class: extraClass = "", variant = "info" } = Astro.props;
+---
+
+<div
+  id="toast"
+  role="alert"
+  class={clsx(
+    "hidden fixed top-4 left-1/2 transform -translate-x-1/2 z-1000 backdrop-blur-xs p-6 rounded-lg text-white shadow-lg transition-all duration-300 bg-blue-600/95",
+    extraClass
+  )}
+>
+  <slot />
+</div>

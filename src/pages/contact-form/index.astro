@@ -1,0 +1,89 @@
+---
+import "@/assets/css/contact-form/styles.css";
+// Component Imports
+import MainLayout from "@/layouts/main.astro";
+import Form from "@/components/contact-form/Form.jsx";
+import Toast from "@/components/Toast.astro";
+
+// Page Metadata
+const content = {
+  title: "Contact Form | Frontend Showcase",
+  description:
+    'This is a solution to the "Contact Form challenge" on Frontend Mentor.',
+};
+
+// Image Imports
+---
+
+<MainLayout content={content}>
+  <div
+    class="bg-[var(--contact-form-background)] min-h-[100vh] flex items-center justify-center text-[var(--contact-form-text)] p-[5%]"
+  >
+    <div class="max-w-[740px] bg-white w-11/12 p-10 rounded-lg space-y-5">
+      <h1 class="text-start text-inherit font-inherit text-2xl font-bold">
+        Contact Us
+      </h1>
+      <Form client:load />
+      <Toast />
+    </div>
+  </div>
+</MainLayout>
+
+<script>
+  window.addEventListener("submission-success", (e) => {
+    const toast = document.querySelector("#toast");
+    if (toast) {
+      const toastHeader = document.createElement("h2");
+      toastHeader.classList.add(
+        "text-lg",
+        "font-semibold",
+        "text-white",
+        "mb-2",
+        "flex",
+        "items-center",
+        "gap-2"
+      );
+
+      const svgNS = "http://www.w3.org/2000/svg";
+      const icon = document.createElementNS(svgNS, "svg");
+      icon.setAttribute("width", "20");
+      icon.setAttribute("height", "20");
+      icon.setAttribute("viewBox", "0 0 20 20");
+
+      // create the <path>
+      const path = document.createElementNS(svgNS, "path");
+      path.setAttribute("fill", "#fff");
+      path.setAttribute(
+        "d",
+        "M14.28 7.72a.748.748 0 0 1 0 1.06l-5.25 5.25a.748.748 0 0 1-1.06 0l-2.25-2.25a.75.75 0 1 1 1.06-1.06l1.72 1.72 4.72-4.72a.75.75 0 0 1 1.06 0Zm5.47 2.78A9.75 9.75 0 1 1 10 .75a9.76 9.76 0 0 1 9.75 9.75Zm-1.5 0A8.25 8.25 0 1 0 10 18.75a8.26 8.26 0 0 0 8.25-8.25Z"
+      );
+
+      // assemble and append
+      icon.appendChild(path);
+      const toastHeaderText = document.createElement("span");
+      toastHeaderText.textContent = "Message Sent!";
+      toastHeader.append(icon, toastHeaderText);
+
+      toast.appendChild(toastHeader);
+
+      const toastMessage = document.createElement("p");
+      toastMessage.textContent = (e as CustomEvent).detail;
+      toastMessage.classList.add("text-white/90");
+      toast.appendChild(toastMessage);
+
+      toast.classList.remove("hidden");
+      toast.classList.replace(
+        "bg-blue-600/95",
+        "bg-[var(--contact-form-accent-dark)]"
+      );
+      setTimeout(() => {
+        toast.classList.add("hidden");
+        toast.classList.replace(
+          "bg-[var(--contact-form-accent-dark)]",
+          "bg-blue-600/95"
+        );
+        toast.replaceChildren();
+      }, 3000);
+    }
+  });
+</script>

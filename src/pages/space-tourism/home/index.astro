@@ -1,0 +1,20 @@
+---
+import { Image } from "astro:assets";
+// Component Imports
+import MainLayout from "@/layouts/main.astro";
+import "@/assets/css/space-tourism/styles.css";
+
+// Page Metadata
+const content = {
+  title: "Space Tourism | Frontend Showcase",
+  description:
+    'This is a solution to the "Space Tourism challenge" on Frontend Mentor.',
+};
+
+// Image Imports
+import backgroundImageDesktop from "@/assets/images/space-tourism/home/background-home-desktop.jpg";
+import backgroundImageTablet from "@/assets/images/space-tourism/home/background-home-tablet.jpg";
+import backgroundImageMobile from "@/assets/images/space-tourism/home/background-home-mobile.jpg";
+---
+
+<MainLayout content={content}> Hello </MainLayout>
